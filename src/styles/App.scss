@@ -1,0 +1,147 @@
+@import 'variables.scss';
+
+$phone-width:1080px;
+
+body{
+    background-image:$background-image;
+    background-size:100%;
+    background-repeat: repeat-y;
+    padding:20px 3%;
+    @media only screen and (max-width:$phone-width){
+        font-size:100%;
+    }
+}
+
+.trailer{
+    width:100%;
+    height:450px;
+    margin-bottom:20px;
+    display:none;
+    &.show{
+        display:block;
+    }
+    .frame{
+        width:100%;
+        height:400px;
+        background-color:$main-color;
+        margin:10px 0px;
+    }
+    .close{
+        width:100%;
+        line-height:30px;
+        text-align:center;
+        color:white;
+        background-color:rgb(204, 34, 34);
+        &:hover{
+            cursor:pointer;
+        }
+    }
+}
+
+.movie-list{
+    width:70%;
+    float:left;
+    @media only screen and (max-width:$phone-width){
+        width:100%;
+    }
+    h1,h3{
+        background-color:$head-color;
+        text-align:center;
+    }
+    table{
+        width:100%;
+        border-collapse:separate; 
+        border-spacing: 1px 1px;
+    }
+    .table-button-row td{
+        font-size:200%;
+        @media only screen and (max-width:$phone-width){
+            font-size:100%;
+        }
+        width:10%;
+        color:red;
+        padding:7px 15px;
+        text-align:center;
+        &:hover{
+            background-color:$head-color;
+            cursor:pointer;
+            &.to-watch{
+                color:white;
+            }
+        }
+        &.watched{
+            color:green;
+        }
+        &.to-watch{
+            color:$head-color;
+        }
+
+    }
+    a {
+        text-decoration:none;
+        &:link{
+            color:$link-color;
+        }
+        &:visited{
+            color:$link-visited;
+        }
+    }
+    .watched{
+        background-color:$movie-watched;
+    }
+    .not-watched{
+        background-color:$main-color;
+    }
+}
+
+.movie-form{
+    width:25%;
+    float:right;
+    margin-bottom:20px;
+    @media only screen and (max-width:$phone-width){
+        width:100%;
+    }
+    h1{
+        background-color:$main-color;
+        text-align:center;
+    }
+    .form{
+        background-color:$main-color;
+        padding:10px;
+    }
+    strong{
+        font-weight:400;
+        color:red;
+    }
+    input{
+        width:100%;
+    }
+    button{
+        width:50%;
+        margin:8px 25% 0 25%;
+    }
+}
+
+.booking-thanks{
+    width:90vw;
+    padding:43vh 0;
+    margin:5vh 0;
+    text-align:center;
+    background-color:$main-color;
+    font-size:200%;
+    &.hide{
+        display:none;
+    }
+    .close{
+        position:absolute;
+        width:50%;
+        left:25%;
+        padding:12.5vh 0;
+        top:12.5vh;
+        box-shadow: 0px 0px 50px 10px $head-color;
+        &:hover{
+            cursor:pointer;
+            color:red;
+        }
+    }
+}
